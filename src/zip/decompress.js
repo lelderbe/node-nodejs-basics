@@ -1,7 +1,6 @@
 import { open } from 'fs/promises';
 import { createGunzip } from 'zlib';
-import { pipeline } from 'stream';
-import { promisify } from 'util';
+import { pipeline } from 'stream/promises';
 
 // via Promises API async/await
 export const decompress = async () => {
@@ -13,8 +12,7 @@ export const decompress = async () => {
 		const writeStream = destination.createWriteStream();
 		const gunzip = createGunzip();
 
-		const pipe = promisify(pipeline);
-		await pipe(readStream, gunzip, writeStream);
+		await pipeline(readStream, gunzip, writeStream);
 	} catch (err) {
 		console.error('An error occurred:', err);
 		process.exitCode = 1;
