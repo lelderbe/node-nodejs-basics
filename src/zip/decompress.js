@@ -1,8 +1,7 @@
 import { open } from 'fs/promises';
-import { createGunzip } from 'zlib';
 import { pipeline } from 'stream/promises';
+import { createGunzip } from 'zlib';
 
-// via Promises API async/await
 export const decompress = async () => {
 	try {
 		const source = await open(new URL('./files/archive.gz', import.meta.url), 'r');
