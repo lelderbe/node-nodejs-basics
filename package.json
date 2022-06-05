@@ -4,10 +4,9 @@
   "description": "This repository is the part of nodejs-assignments https://github.com/AlreadyBored/nodejs-assignments",
   "type": "module",
   "scripts": {
-	"cli:env": "RSS_1=Hello RSS_2=World node ./src/cli/env.js",
-	"cli:env:ps": "$env:RSS_1=Hello; $env:RSS_2=World; node ./src/cli/env.js",
-	"cli:args": "node ./src/cli/args.js --param1 value1",
-	"cp": "node ./src/cp/cp.js --some arguments here",
+	"cli:args": "node ./src/cli/args.js",
+	"cli:env": "node ./src/cli/env.js",
+	"cp": "node ./src/cp/cp.js",
 	"fs:create": "node ./src/fs/create.js",
 	"fs:copy": "node ./src/fs/copy.js",
 	"fs:delete": "node ./src/fs/delete.js",
