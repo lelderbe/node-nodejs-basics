@@ -4,11 +4,10 @@ export const nthFibonacci = (n) => n < 2 ? n : nthFibonacci(n - 1) + nthFibonacc
 
 export const sendResult = () => {
 	const n = parseInt(workerData);
-	if (!isNaN(n)) {
-		parentPort.postMessage(nthFibonacci(n));
-	} else {
-		emit('error');
+	if (isNaN(n) || n < 0) {
+		throw new Error('Bad argument');
 	}
+	parentPort.postMessage(nthFibonacci(n));
 };
 
 sendResult();
