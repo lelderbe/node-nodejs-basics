@@ -1,4 +1,4 @@
-import * as fs from 'fs/promises';
+import fs from 'fs/promises';
 
 export const copy = async () => {
 	async function copyFolder(from, to) {
@@ -32,3 +32,6 @@ export const copy = async () => {
 		throw new Error('FS operation failed');
 	}
 };
+
+// for test with "npm run fs:copy"
+copy();

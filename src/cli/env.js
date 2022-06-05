@@ -9,3 +9,6 @@ export const parseEnv = () => {
 
 	console.log(outputData.join('; '));
 };
+
+// for test with "npm run cli:env"
+parseEnv();

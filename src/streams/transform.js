@@ -18,3 +18,6 @@ export const transform = async () => {
 
 	inputStream.pipe(reverseStream).pipe(outputStream);
 };
+
+// for test with "npm run streams:transform"
+transform();

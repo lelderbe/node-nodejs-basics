@@ -11,3 +11,6 @@ export const list = async () => {
 		throw new Error('FS operation failed');
 	}
 };
+
+// for test with "npm run fs:list"
+list();

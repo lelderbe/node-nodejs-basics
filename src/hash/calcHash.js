@@ -7,3 +7,6 @@ export const calculateHash = async () => {
 	const input = createReadStream(new URL('./files/fileToCalculateHashFor.txt', import.meta.url));
 	input.pipe(hash).setEncoding('hex').pipe(process.stdout);
 };
+
+// for test with "npm run hash"
+calculateHash();

@@ -17,3 +17,6 @@ export const decompress = async () => {
 		process.exitCode = 1;
 	}
 };
+
+// for test with "npm run zip:decompress"
+decompress();

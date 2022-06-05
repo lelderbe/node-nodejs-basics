@@ -17,3 +17,6 @@ export const parseArgs = () => {
 
 	console.log(outputData.join(', '));
 };
+
+// for test with "npm run cli:args -- --param1 val1 --param2 val2"
+parseArgs();

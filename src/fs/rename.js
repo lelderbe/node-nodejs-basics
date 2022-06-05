@@ -1,4 +1,4 @@
-import * as fs from 'fs/promises';
+import fs from 'fs/promises';
 
 export const rename = async () => {
 	const from = new URL('./files/wrongFilename.txt', import.meta.url);
@@ -19,3 +19,6 @@ export const rename = async () => {
 		throw new Error('FS operation failed');
 	}
 };
+
+// for test with "npm run fs:rename"
+rename();
