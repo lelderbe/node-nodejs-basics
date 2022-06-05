@@ -1,10 +1,12 @@
 # Node.js basics
 
-Tasks are here: https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/nodejs-basics/assignment.md#subtasks
+**These are my solutions for Week1: Module "Node.js basics"**
+
+**Tasks are here:** https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/nodejs-basics/assignment.md#subtasks
 
 ## Run tests
 
-You can test with these npm scripts (from package.json):
+You can test with the npm scripts below:
 
 #### File system (src/fs)
 
@@ -26,7 +28,7 @@ npm run cli:args -- --addYourArgHere yourArgValue --Param2 value2
 RSS_1=Hello RSS_2=World npm run cli:env
 
 # for Windows PowerShell
-$env:RSS_1=Hello; $env:RSS_2=World; npm run cli:env
+$env:RSS_1="Hello"; $env:RSS_2="World"; npm run cli:env
 ```
 
 #### Modules(src/modules)
