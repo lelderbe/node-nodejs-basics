@@ -1,7 +1,8 @@
 import { spawn } from 'child_process';
+import url from 'url';
 
 export const spawnChildProcess = async (args) => {
-	const path = new URL('./files/script.js', import.meta.url).pathname;
+	const path = url.fileURLToPath(new URL('./files/script.js', import.meta.url));
 	const child = spawn('node', [path, ...args]);
 
 	child.stdout.on('data', (data) => {
