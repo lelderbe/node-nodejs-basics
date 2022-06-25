@@ -1,3 +1,14 @@
 export const parseEnv = () => {
-    // Write your code here 
+	const outputData = [];
+
+	for (let key in process.env) {
+		if (key.startsWith('RSS_')) {
+			outputData.push(key + '=' + process.env[key]);
+		}
+	}
+
+	console.log(outputData.join('; '));
 };
+
+// for test with "npm run cli:env"
+parseEnv();
